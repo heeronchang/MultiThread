@@ -10,7 +10,7 @@
 
 @interface HCReadWriteLock()
 
-@property (nonatomic, strong) NSString *testStr;
+@property (nonatomic, copy) NSString *testStr;
 @property (nonatomic, strong) dispatch_queue_t syncQueue;
 
 @end
@@ -21,7 +21,12 @@
 @synthesize testStr = _testStr;
 
 - (NSString *)testStr {
+    __block NSString *str;
+    dispatch_sync(self.syncQueue, ^{
+        str = self->_testStr;
+    });
     
+    return str;
 }
 
 @end
