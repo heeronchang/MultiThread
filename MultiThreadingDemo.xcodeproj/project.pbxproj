@@ -12,6 +12,12 @@
 		6C0E07B4213CD45300DCB801 /* HCNSLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0E07B3213CD45300DCB801 /* HCNSLock.m */; };
 		6C0E07B7213CD53C00DCB801 /* HCNSCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0E07B6213CD53C00DCB801 /* HCNSCondition.m */; };
 		6C0E07BA213CD84700DCB801 /* HCSyncronized.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0E07B9213CD84700DCB801 /* HCSyncronized.m */; };
+		6C49B5A52160B8A100E81DF6 /* HCGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5A42160B8A100E81DF6 /* HCGCD.m */; };
+		6C49B5AA216B48C900E81DF6 /* HCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5A9216B48C900E81DF6 /* HCOperation.m */; };
+		6C49B5AD216B67DD00E81DF6 /* HCSubOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5AC216B67DD00E81DF6 /* HCSubOperation.m */; };
+		6C49B5B0216B6A9D00E81DF6 /* HCOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5AF216B6A9D00E81DF6 /* HCOperationQueue.m */; };
+		6C49B5B3216C45EB00E81DF6 /* HCPthread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5B2216C45EB00E81DF6 /* HCPthread.m */; };
+		6C49B5B6216C511800E81DF6 /* HCNSThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C49B5B5216C511800E81DF6 /* HCNSThread.m */; };
 		6C642F5C21412D7E00013F23 /* HCNSConditionLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C642F5B21412D7E00013F23 /* HCNSConditionLock.m */; };
 		6C642F5F2141459D00013F23 /* HCReadWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C642F5E2141459D00013F23 /* HCReadWriteLock.m */; };
 		6CEBF2892137B7E4008868BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEBF2882137B7E4008868BF /* AppDelegate.m */; };
@@ -36,6 +42,18 @@
 		6C0E07B8213CD84700DCB801 /* HCSyncronized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSyncronized.h; sourceTree = "<group>"; };
 		6C0E07B9213CD84700DCB801 /* HCSyncronized.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSyncronized.m; sourceTree = "<group>"; };
 		6C0E07BF213FE6F100DCB801 /* MultiThreadingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultiThreadingDemo.entitlements; sourceTree = "<group>"; };
+		6C49B5A32160B8A100E81DF6 /* HCGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGCD.h; sourceTree = "<group>"; };
+		6C49B5A42160B8A100E81DF6 /* HCGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGCD.m; sourceTree = "<group>"; };
+		6C49B5A8216B48C900E81DF6 /* HCOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOperation.h; sourceTree = "<group>"; };
+		6C49B5A9216B48C900E81DF6 /* HCOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOperation.m; sourceTree = "<group>"; };
+		6C49B5AB216B67DD00E81DF6 /* HCSubOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSubOperation.h; sourceTree = "<group>"; };
+		6C49B5AC216B67DD00E81DF6 /* HCSubOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSubOperation.m; sourceTree = "<group>"; };
+		6C49B5AE216B6A9D00E81DF6 /* HCOperationQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOperationQueue.h; sourceTree = "<group>"; };
+		6C49B5AF216B6A9D00E81DF6 /* HCOperationQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOperationQueue.m; sourceTree = "<group>"; };
+		6C49B5B1216C45EB00E81DF6 /* HCPthread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPthread.h; sourceTree = "<group>"; };
+		6C49B5B2216C45EB00E81DF6 /* HCPthread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPthread.m; sourceTree = "<group>"; };
+		6C49B5B4216C511800E81DF6 /* HCNSThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNSThread.h; sourceTree = "<group>"; };
+		6C49B5B5216C511800E81DF6 /* HCNSThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCNSThread.m; sourceTree = "<group>"; };
 		6C642F5A21412D7E00013F23 /* HCNSConditionLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNSConditionLock.h; sourceTree = "<group>"; };
 		6C642F5B21412D7E00013F23 /* HCNSConditionLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCNSConditionLock.m; sourceTree = "<group>"; };
 		6C642F5D2141459D00013F23 /* HCReadWriteLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCReadWriteLock.h; sourceTree = "<group>"; };
@@ -67,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C49B59F2160B6C500E81DF6 /* Threads */ = {
+			isa = PBXGroup;
+			children = (
+				6C49B5A32160B8A100E81DF6 /* HCGCD.h */,
+				6C49B5A42160B8A100E81DF6 /* HCGCD.m */,
+				6C49B5A8216B48C900E81DF6 /* HCOperation.h */,
+				6C49B5A9216B48C900E81DF6 /* HCOperation.m */,
+				6C49B5AB216B67DD00E81DF6 /* HCSubOperation.h */,
+				6C49B5AC216B67DD00E81DF6 /* HCSubOperation.m */,
+				6C49B5AE216B6A9D00E81DF6 /* HCOperationQueue.h */,
+				6C49B5AF216B6A9D00E81DF6 /* HCOperationQueue.m */,
+				6C49B5B1216C45EB00E81DF6 /* HCPthread.h */,
+				6C49B5B2216C45EB00E81DF6 /* HCPthread.m */,
+				6C49B5B4216C511800E81DF6 /* HCNSThread.h */,
+				6C49B5B5216C511800E81DF6 /* HCNSThread.m */,
+			);
+			path = Threads;
+			sourceTree = "<group>";
+		};
 		6CEBF27B2137B7E4008868BF = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +123,7 @@
 		6CEBF2862137B7E4008868BF /* MultiThreadingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6C49B59F2160B6C500E81DF6 /* Threads */,
 				6C0E07BF213FE6F100DCB801 /* MultiThreadingDemo.entitlements */,
 				6CEBF2A02137BFBF008868BF /* Lock */,
 				6CEBF2872137B7E4008868BF /* AppDelegate.h */,
@@ -208,13 +246,19 @@
 				6C0E07B1213CD1A400DCB801 /* HCpthread_mutex.m in Sources */,
 				6C0E07B4213CD45300DCB801 /* HCNSLock.m in Sources */,
 				6CEBF2972137B7E6008868BF /* main.m in Sources */,
+				6C49B5AA216B48C900E81DF6 /* HCOperation.m in Sources */,
 				6CEBF2892137B7E4008868BF /* AppDelegate.m in Sources */,
 				6C0E07AE213CCD8A00DCB801 /* HCDispatch_semaphore.m in Sources */,
 				6C642F5C21412D7E00013F23 /* HCNSConditionLock.m in Sources */,
+				6C49B5A52160B8A100E81DF6 /* HCGCD.m in Sources */,
+				6C49B5B3216C45EB00E81DF6 /* HCPthread.m in Sources */,
 				6C642F5F2141459D00013F23 /* HCReadWriteLock.m in Sources */,
 				6C0E07B7213CD53C00DCB801 /* HCNSCondition.m in Sources */,
+				6C49B5AD216B67DD00E81DF6 /* HCSubOperation.m in Sources */,
 				6CEBF29F2137BE72008868BF /* RootTableViewController.m in Sources */,
 				6CEBF2A32137BFE5008868BF /* HCOSSpinLock.m in Sources */,
+				6C49B5B6216C511800E81DF6 /* HCNSThread.m in Sources */,
+				6C49B5B0216B6A9D00E81DF6 /* HCOperationQueue.m in Sources */,
 				6C0E07BA213CD84700DCB801 /* HCSyncronized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

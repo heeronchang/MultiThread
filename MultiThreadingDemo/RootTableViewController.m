@@ -7,10 +7,18 @@
 //
 
 #import "RootTableViewController.h"
+
+// MARK: 锁
 #import "HCNSCondition.h"
 #import "HCNSConditionLock.h"
 #import "HCDispatch_semaphore.h"
 #import "HCpthread_mutex.h"
+
+// MARK: 多线程
+#import "HCGCD.h"
+#import "HCOperation.h"
+#import "HCOperationQueue.h"
+#import "HCPthread.h"
 
 
 @interface RootTableViewController ()
@@ -21,8 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
+
 - (IBAction)OSSpinLockAction:(UIButton *)sender {
 }
 
@@ -42,6 +50,59 @@
     HCNSConditionLock *conditionLockObj = [HCNSConditionLock new];
     [conditionLockObj test];
 }
+
+// MARK: GCD
+- (IBAction)sync_serial:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    [obj test_Sync_Serial];
+}
+- (IBAction)async_serial:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    [obj test_async_serial];
+}
+- (IBAction)sync_concurrent:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    [obj test_sync_concurrent];
+}
+- (IBAction)async_concurrent:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    [obj test_async_concurrent];
+}
+- (IBAction)sync_main_main:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    [obj test_sync_main];
+}
+- (IBAction)sync_main_other:(id)sender {
+    HCGCD *obj = [HCGCD new];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [obj test_sync_main];
+    });
+}
+- (IBAction)NSInvocationOperation:(id)sender {
+    HCOperation *opt = [HCOperation new];
+    [opt testInvocation];
+}
+- (IBAction)NSInvocationOperationInOther:(id)sender {
+    HCOperation *opt = [HCOperation new];
+    [opt testInvocationInOther];
+}
+- (IBAction)NSBlockOperation:(id)sender {
+    HCOperation *opt = [HCOperation new];
+    [opt testBlockOperation];
+}
+- (IBAction)customerOperation:(id)sender {
+    HCOperation *opt = [HCOperation new];
+    [opt testCustomerOperation];
+}
+- (IBAction)NSOperationQueue:(id)sender {
+    HCOperationQueue *queueOpt = [HCOperationQueue new];
+    [queueOpt testOperationQueue];
+}
+- (IBAction)pthread_test:(id)sender {
+    HCPthread *pthread = [HCPthread new];
+    [pthread test];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

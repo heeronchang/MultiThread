@@ -20,6 +20,15 @@
 
 @synthesize testStr = _testStr;
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.syncQueue = dispatch_queue_create("my queue", DISPATCH_QUEUE_CONCURRENT);
+    }
+    
+    return self;
+}
+
 - (NSString *)testStr {
     __block NSString *str;
     dispatch_sync(self.syncQueue, ^{
@@ -27,6 +36,12 @@
     });
     
     return str;
+}
+
+- (void)setTestStr:(NSString *)testStr {
+    dispatch_barrier_async(self.syncQueue, ^{
+        self->_testStr = testStr;
+    });
 }
 
 @end
