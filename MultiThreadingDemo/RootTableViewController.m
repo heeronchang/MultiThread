@@ -23,6 +23,8 @@
 
 @interface RootTableViewController ()
 
+@property (nonatomic, strong) dispatch_source_t timer;
+
 @end
 
 @implementation RootTableViewController
@@ -78,6 +80,17 @@
         [obj test_sync_main];
     });
 }
+- (IBAction)GCDTimer:(id)sender {
+    NSLog(@"gcd timer");
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(self.timer, ^{
+        NSLog(@"xx");
+    });
+    dispatch_resume(self.timer);
+}
+
 - (IBAction)NSInvocationOperation:(id)sender {
     HCOperation *opt = [HCOperation new];
     [opt testInvocation];
